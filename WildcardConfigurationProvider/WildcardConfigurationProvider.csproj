@@ -8,13 +8,30 @@
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <EmbedUntrackedSources>True</EmbedUntrackedSources>
     <Authors>ladenedge</Authors>
     <Description>A file-based .NET configuration provider that supports wildcard notation.</Description>
     <Copyright>© 2022 Jay Miller</Copyright>
+    <IncludeSymbols>true</IncludeSymbols>
+    <PackageProjectUrl>https://github.com/ladenedge/WildcardConfigurationProvider</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/ladenedge/WildcardConfigurationProvider.git</RepositoryUrl>
+    <PublishRepositoryUrl>True</PublishRepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="6.0.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
